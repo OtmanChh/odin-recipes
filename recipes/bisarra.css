@@ -1,0 +1,33 @@
+body {
+  font-family: Georgia, serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff5eb;
+}
+
+h1, h2 {
+  color: #8b4513;
+}
+
+a {
+  color: #8b4513;
+}
+
+img {
+  border: 3px solid #d2a679;
+}
+
+ul, ol {
+  line-height: 1.8;
+}
+
+ul li::marker {
+  color: #8b4513;
+  font-weight: bold;
+}
+
+ol li::marker {
+  color: #8b4513; 
+  font-weight: bold;
+}
