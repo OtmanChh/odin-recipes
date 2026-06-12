@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moroccan Recipes | Traditional & Modern Cuisine</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="logo">Moroccan<span>Recipes</span></a>
+      <nav class="main-nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Moroccan Recipes</h1>
+    <p>Welcome to my collection of traditional Moroccan recipes. Moroccan cuisine is celebrated worldwide for its bold spices, rich layered flavors, and diverse cultural influences. Explore some of its most famous dishes below!</p>
+  </section>
+
+  <main class="content-area">
+    <div class="recipe-grid">
+
+      <a href="recipes/moroccan-couscous.html" class="recipe-card">
+        <div class="card-image-wrapper">
+          <img src="./images/couscous.jpg" alt="The Famous Moroccan Couscous Dish.">
+        </div>
+        <div class="card-content">
+          <h3>Couscous</h3>
+          <span class="view-recipe">View Recipe &rarr;</span>
+        </div>
+      </a>
+
+      <a href="recipes/rfisa.html" class="recipe-card">
+        <div class="card-image-wrapper">
+          <img src="./images/rfisa.jpg" alt="The Moroccan Rfisa Dish.">
+        </div>
+        <div class="card-content">
+          <h3>Rfisa</h3>
+          <span class="view-recipe">View Recipe &rarr;</span>
+        </div>
+      </a>
+
+      <a href="recipes/bisarra.html" class="recipe-card">
+        <div class="card-image-wrapper">
+          <img src="./images/bisarra.jpg" alt="The Moroccan Fava Bean Soup (Bisarra).">
+        </div>
+        <div class="card-content">
+          <h3>Bisarra</h3>
+          <span class="view-recipe">View Recipe &rarr;</span>
+        </div>
+      </a>
+
+      <a href="recipes/harira.html" class="recipe-card">
+        <div class="card-image-wrapper">
+          <img src="./images/harira.jpg" alt="The Famous Moroccan Harira Soup.">
+        </div>
+        <div class="card-content">
+          <h3>Harira</h3>
+          <span class="view-recipe">View Recipe &rarr;</span>
+        </div>
+      </a>
+
+      <a href="recipes/chicken-bastilla.html" class="recipe-card">
+        <div class="card-image-wrapper">
+          <img src="./images/chicken-bastilla.jpg" alt="The Moroccan Chicken Bastilla.">
+        </div>
+        <div class="card-content">
+          <h3>Chicken Bastilla</h3>
+          <span class="view-recipe">View Recipe &rarr;</span>
+        </div>
+      </a>
+
+      <a href="recipes/seafood-bastilla.html" class="recipe-card">
+        <div class="card-image-wrapper">
+          <img src="./images/seafood-bastilla.jpg" alt="The Moroccan Seafood Bastilla.">
+        </div>
+        <div class="card-content">
+          <h3>Seafood Bastilla</h3>
+          <span class="view-recipe">View Recipe &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Moroccan Recipes Project. Crafted with care.</p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+/* ==========================================================================
+   1. CSS RESET & GLOBAL VARIABLES
+   ========================================================================== */
+:root {
+  --primary-color: #8b4513;      /* Warm spice brown */
+  --accent-color: #d2a679;       /* Golden clay accent */
+  --bg-color: #fdfaf7;           /* Soft off-white canvas */
+  --text-main: #3c2f2f;          /* Dark rich brown for high readability */
+  --card-bg: #ffffff;            /* Pure white for recipe cards */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', Arial, sans-serif;
+  --shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. SITE NAVIGATION HEADER
+   ========================================================================== */
+.site-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px); /* Modern blurred glass effect */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(210, 166, 121, 0.2);
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent-color);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  margin-left: 24px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+  color: var(--primary-color);
+}
+
+/* ==========================================================================
+   3. HERO INTRODUCTION
+   ========================================================================== */
+.hero {
+  max-width: 800px;
+  margin: 60px auto 40px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #615151;
+}
+
+/* ==========================================================================
+   4. RECIPE GRID & CARDS (Using Modern CSS Grid)
+   ========================================================================== */
+.content-area {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 80px 20px;
+}
+
+.recipe-grid {
+  display: grid;
+  /* Automatically columns based on width, adjusting gracefully to screen sizes */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px; 
+}
+
+.recipe-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(210, 166, 121, 0.1);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Lift card up smoothly on hover */
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(139, 69, 19, 0.15);
+  border-color: var(--accent-color);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the image smartly to fill the space perfectly without distorting */
+  transition: var(--transition);
+}
+
+/* Subtle zoom effect on hover */
+.recipe-card:hover .card-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.view-recipe {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: auto; /* Forces the link to line up at the bottom of the card */
+  transition: var(--transition);
+}
+
+.recipe-card:hover .view-recipe {
+  color: var(--primary-color);
+  padding-left: 4px; /* Tiny nudge outward when hovered */
+}
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+.site-footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #2c2222;
+  color: #a89a9a;
+  font-size: 0.9rem;
+}
